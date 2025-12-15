@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <article class="page">
+    {% if html %}
+      {{ html|safe }}
+    {% else %}
+      <h1>{{ workshop.title }}</h1>
+      <p>No workshop landing page yet. Add content/{{ workshop.slug }}/index.md</p>
+    {% endif %}
+
+    <h2>Days</h2>
+    <ul>
+      {% for d in workshop.days %}
+        <li><a href="/workshops/{{ workshop.slug }}/{{ d.slug }}/">{{ d.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endblock %}

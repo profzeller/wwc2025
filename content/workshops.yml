@@ -1,0 +1,15 @@
+workshops:
+  - slug: cyber-for-beginners
+    title: Cyber for Beginners
+    days:
+      - slug: day1
+        title: Day 1 — Foundations
+        pages:
+          - file: 01-welcome.md
+            title: Welcome & Framing
+          - file: 02-what-is-infosec.md
+            title: What is Information Security?
+          - file: 03-cia-triad.md
+            title: The CIA Triad
+          - file: lab1-cia-triad.md
+            title: Lab 1 — CIA Triad in Action

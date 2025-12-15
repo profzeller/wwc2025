@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ workshop.title if workshop else "wwc2025" }}</title>
+  <link rel="stylesheet" href="/static/css/site.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/">wwc2025</a>
+      {% if workshop %}<span class="sep">/</span><span class="wk">{{ workshop.title }}</span>{% endif %}
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="navblock">
+        <div class="navtitle">Workshops</div>
+        <ul class="nav">
+          {% for w in nav %}
+            <li>
+              <a href="/workshops/{{ w.slug }}/"
+                 class="{% if workshop and w.slug == workshop.slug %}active{% endif %}">
+                {{ w.title }}
+              </a>
+              {% if workshop and w.slug == workshop.slug %}
+                <ul class="subnav">
+                  {% for d in workshop.days %}
+                    <li>
+                      <a href="/workshops/{{ workshop.slug }}/{{ d.slug }}/"
+                         class="{% if day and d.slug == day.slug %}active{% endif %}">
+                        {{ d.title }}
+                      </a>
+                      {% if day and d.slug == day.slug %}
+                        <ul class="subnav">
+                          {% for p in d.pages %}
+                            {% set pslug = p.file[:-3] %}
+                            <li>
+                              <a href="/workshops/{{ workshop.slug }}/{{ d.slug }}/{{ pslug }}/"
+                                 class="{% if current_url and current_url.endswith('/' ~ pslug ~ '/') %}active{% endif %}">
+                                {{ p.title }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% if toc %}
+      <div class="navblock">
+        <div class="navtitle">On this page</div>
+        <div class="toc">
+          {{ toc|safe }}
+        </div>
+      </div>
+      {% endif %}
+    </aside>
+
+    <main class="content">
+      {% block content %}{% endblock %}
+      <div class="pager">
+        {% if prev_page %}
+          <a class="pager-btn" href="{{ prev_page.url }}">← {{ prev_page.title }}</a>
+        {% endif %}
+        {% if next_page %}
+          <a class="pager-btn" href="{{ next_page.url }}">{{ next_page.title }} →</a>
+        {% endif %}
+      </div>
+    </main>
+  </div>
+</body>
+</html>

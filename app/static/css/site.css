@@ -1,0 +1,94 @@
+:root {
+  --bg: #0b0f14;
+  --panel: #121826;
+  --text: #e6edf3;
+  --muted: #9aa4b2;
+  --link: #8ab4f8;
+  --border: #263042;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: rgba(11,15,20,0.9);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  backdrop-filter: blur(8px);
+}
+
+.brand a { font-weight: 700; }
+.sep { margin: 0 8px; color: var(--muted); }
+.wk { color: var(--muted); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: calc(100vh - 50px);
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: var(--panel);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.content {
+  padding: 24px;
+  max-width: 1000px;
+}
+
+.navblock { margin-bottom: 18px; }
+.navtitle { font-weight: 700; margin-bottom: 8px; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+
+.nav, .subnav { list-style: none; padding-left: 0; margin: 0; }
+.nav > li { margin-bottom: 8px; }
+.subnav { padding-left: 12px; margin-top: 6px; border-left: 1px solid var(--border); }
+
+.nav a, .subnav a { display: block; padding: 6px 8px; border-radius: 8px; }
+.nav a.active, .subnav a.active { background: rgba(138,180,248,0.12); }
+
+.page h1, .page h2, .page h3 { margin-top: 1.2em; }
+.page p, .page li { line-height: 1.55; }
+
+.page pre {
+  background: #0f1522;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.page code {
+  background: rgba(154,164,178,0.12);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.pager {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.pager-btn {
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+}
