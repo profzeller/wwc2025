@@ -1,6 +1,9 @@
 # What Is Information Security?
 
+![Information security fundamentals showing assets, threats, vulnerabilities, and controls](/assets/cyber-for-beginners/day1/images/day1-what-is-information-security.png)
+
 Information security is the practice of protecting information and systems from:
+
 - Unauthorized access
 - Unauthorized use
 - Unauthorized disclosure
@@ -12,6 +15,7 @@ Information security is the practice of protecting information and systems from:
 
 ### Assets
 Anything of value:
+
 - Data (grades, credentials, research)
 - Systems (servers, laptops, networks)
 - Accounts and identities
@@ -19,6 +23,7 @@ Anything of value:
 
 ### Threats
 Anything capable of causing harm:
+
 - Malware
 - Phishing and social engineering
 - Insider misuse (intentional or accidental)
@@ -27,6 +32,7 @@ Anything capable of causing harm:
 
 ### Vulnerabilities
 Weaknesses that threats exploit:
+
 - Weak passwords
 - Unpatched software
 - Excessive permissions
@@ -34,6 +40,7 @@ Weaknesses that threats exploit:
 
 ### Controls
 Safeguards that reduce risk:
+
 - Technical (firewalls, MFA, encryption)
 - Administrative (policies, procedures)
 - Physical (locks, access badges)

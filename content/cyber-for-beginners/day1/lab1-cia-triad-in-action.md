@@ -5,6 +5,7 @@ Apply the CIA Triad to real-world scenarios and justify your reasoning.
 
 ## Instructions
 Work in small groups. For each scenario:
+
 1. Identify the **primary** CIA component impacted
 2. Identify any **secondary** impacts
 3. Propose one reasonable control that could reduce risk
@@ -18,6 +19,7 @@ Work in small groups. For each scenario:
 5. An HR spreadsheet containing sensitive data is emailed to the wrong group.
 
 ## Discussion Questions
+
 - Why might multiple CIA components apply?
 - Which incidents cause the most operational impact?
 - What evidence would indicate each incident occurred?

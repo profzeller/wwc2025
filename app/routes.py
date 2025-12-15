@@ -6,6 +6,7 @@ from typing import Any, Optional
 
 import yaml
 from flask import Blueprint, current_app, abort, render_template
+from flask import send_from_directory
 
 from .md import render_markdown_file
 
@@ -16,7 +17,7 @@ bp = Blueprint("workshops", __name__)
 @dataclass
 class NavPage:
     title: str
-    file: str  # filename within day folder, e.g. "01-welcome.md"
+    file: str  # filename within day folder, e.g. "01-welcome-and-framing.md"
 
 
 @dataclass
@@ -66,7 +67,7 @@ def flatten_pages(workshop: NavWorkshop) -> list[dict[str, Any]]:
     """
     Returns a linear list of pages for next/prev navigation:
     [
-      {"day_slug": "day1", "file": "01-welcome.md", "title": "...", "url_slug": "01-welcome"},
+      {"day_slug": "day1", "file": "01-welcome-and-framing.md", "title": "...", "url_slug": "01-welcome"},
       ...
     ]
     """
@@ -91,7 +92,7 @@ def slugify_filename(filename: str) -> str:
 
 
 def file_for_page(workshop_slug: str, day_slug: str, page_slug: str) -> Path:
-    # map "01-welcome" -> "01-welcome.md"
+    # map "01-welcome" -> "01-welcome-and-framing.md"
     md_path = content_root() / workshop_slug / day_slug / f"{page_slug}.md"
     return md_path
 
@@ -210,3 +211,23 @@ def workshop_page(workshop_slug: str, day_slug: str, page_slug: str):
         next_page=next_payload,
         current_url=f"/workshops/{workshop_slug}/{day_slug}/{page_slug}/",
     )
+
+
+@bp.get("/assets/<path:asset_path>")
+def assets(asset_path: str):
+    """
+    Serve static assets stored under the content directory.
+    Example:
+      /assets/cyber-for-beginners/day1/images/day1-welcome-framing.png
+    """
+    root = content_root()
+    full_path = (root / asset_path).resolve()
+
+    # Security: prevent path traversal outside content root
+    if not str(full_path).startswith(str(root)):
+        abort(404)
+
+    if not full_path.exists() or not full_path.is_file():
+        abort(404)
+
+    return send_from_directory(root, asset_path)

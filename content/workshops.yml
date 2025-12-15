@@ -5,11 +5,27 @@ workshops:
       - slug: day1
         title: Day 1 — Foundations
         pages:
-          - file: 01-welcome.md
+          - file: 01-welcome-and-framing.md
             title: Welcome & Framing
-          - file: 02-what-is-infosec.md
+
+          - file: 02-what-is-information-security.md
             title: What is Information Security?
-          - file: 03-cia-triad.md
+
+          - file: 03-the-cia-triad.md
             title: The CIA Triad
-          - file: lab1-cia-triad.md
+
+          - file: lab1-cia-triad-in-action.md
             title: Lab 1 — CIA Triad in Action
+
+          - file: 04-cyber-hygiene-basics.md
+            title: Cyber Hygiene Basics
+
+          - file: lab2-cyber-hygiene-challenge.md
+            title: Lab 2 — Cyber Hygiene Challenge
+
+          - file: 05-protecting-systems-and-data.md
+            title: Protecting Systems and Data
+
+          - file: 06-day-1-wrap-up.md
+            title: Day 1 Wrap-Up
+
