@@ -5,6 +5,7 @@ workshops:
       - slug: day1
         title: Day 1 — Foundations
         pages:
+
           - file: 01-welcome-and-framing.md
             title: Welcome & Framing
 
@@ -17,6 +18,12 @@ workshops:
           - file: lab1-cia-triad-in-action.md
             title: Lab 1 — CIA Triad in Action
 
+          - file: 03b-risk-thinking-likelihood-impact.md
+            title: Risk Thinking (Likelihood × Impact)
+
+          - file: 03c-threats-vulns-controls.md
+            title: Threats, Vulnerabilities, Controls
+
           - file: 04-cyber-hygiene-basics.md
             title: Cyber Hygiene Basics
 
@@ -26,6 +33,35 @@ workshops:
           - file: 05-protecting-systems-and-data.md
             title: Protecting Systems and Data
 
+          - file: 05b-networking-basics-for-cyber.md
+            title: Networking Basics for Cyber
+
+          - file: 05c-web-basics-for-cyber.md
+            title: Web Basics (HTTP/S) for Cyber
+
+          - file: 05d-identity-access-basics.md
+            title: Identity & Access Basics
+
+          - file: 05e-crypto-mental-models.md
+            title: Crypto Mental Models
+
+          - file: 05f-logging-detection-basics.md
+            title: Logging & Detection Basics
+
+          - file: 05g-incident-response-fundamentals.md
+            title: Incident Response Fundamentals
+
           - file: 06-day-1-wrap-up.md
             title: Day 1 Wrap-Up
 
+      - slug: day2
+        title: Day 2 — Threats, Defenses, Response
+        pages:
+          - file: index.md
+            title: Day 2 Overview
+
+      - slug: day3
+        title: Day 3 — Teaching, Labs, and Implementation
+        pages:
+          - file: index.md
+            title: Day 3 Overview

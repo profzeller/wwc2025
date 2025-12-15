@@ -3,7 +3,7 @@ services:
     build: .
     container_name: wwc2025
     ports:
-      - "8080:5000"
+      - "8091:5000"
     # For development: live-edit markdown without rebuilding image
     volumes:
       - ./content:/app/content:ro

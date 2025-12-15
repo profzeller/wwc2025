@@ -64,13 +64,6 @@ def find_workshop(nav: list[NavWorkshop], slug: str) -> Optional[NavWorkshop]:
 
 
 def flatten_pages(workshop: NavWorkshop) -> list[dict[str, Any]]:
-    """
-    Returns a linear list of pages for next/prev navigation:
-    [
-      {"day_slug": "day1", "file": "01-welcome-and-framing.md", "title": "...", "url_slug": "01-welcome"},
-      ...
-    ]
-    """
     out: list[dict[str, Any]] = []
     for day in workshop.days:
         for p in day.pages:
@@ -85,16 +78,13 @@ def flatten_pages(workshop: NavWorkshop) -> list[dict[str, Any]]:
 
 
 def slugify_filename(filename: str) -> str:
-    # strip ".md"
     if filename.lower().endswith(".md"):
         return filename[:-3]
     return filename
 
 
 def file_for_page(workshop_slug: str, day_slug: str, page_slug: str) -> Path:
-    # map "01-welcome" -> "01-welcome-and-framing.md"
-    md_path = content_root() / workshop_slug / day_slug / f"{page_slug}.md"
-    return md_path
+    return content_root() / workshop_slug / day_slug / f"{page_slug}.md"
 
 
 @bp.get("/")
@@ -102,11 +92,10 @@ def home():
     nav = load_nav()
     index_path = content_root() / "index.md"
     if not index_path.exists():
-        # fall back to a simple page
         html = "<h1>Workshop Site</h1><p>Add content/index.md</p>"
         return render_template("index.html", nav=nav, html=html, toc=None)
 
-    html, meta = render_markdown_file(index_path)
+    html, meta = render_markdown_file(index_path, asset_prefix="/assets/")
     return render_template("index.html", nav=nav, html=html, toc=meta.get("toc"))
 
 
@@ -121,7 +110,7 @@ def workshop_landing(workshop_slug: str):
     html = None
     toc = None
     if landing.exists():
-        html, meta = render_markdown_file(landing)
+        html, meta = render_markdown_file(landing, asset_prefix=f"/assets/{workshop_slug}/")
         toc = meta.get("toc")
 
     return render_template(
@@ -148,7 +137,7 @@ def day_landing(workshop_slug: str, day_slug: str):
     html = None
     toc = None
     if landing.exists():
-        html, meta = render_markdown_file(landing)
+        html, meta = render_markdown_file(landing, asset_prefix=f"/assets/{workshop_slug}/{day_slug}/")
         toc = meta.get("toc")
 
     return render_template(
@@ -180,10 +169,13 @@ def workshop_page(workshop_slug: str, day_slug: str, page_slug: str):
     if not page_path.exists():
         abort(404)
 
-    html, meta = render_markdown_file(page_path)
+    html, meta = render_markdown_file(page_path, asset_prefix=f"/assets/{workshop_slug}/{day_slug}/")
 
     linear = flatten_pages(workshop)
-    current_idx = next((i for i, p in enumerate(linear) if p["day_slug"] == day_slug and p["url_slug"] == page_slug), None)
+    current_idx = next(
+        (i for i, p in enumerate(linear) if p["day_slug"] == day_slug and p["url_slug"] == page_slug),
+        None
+    )
 
     prev_page = None
     next_page = None
@@ -223,7 +215,6 @@ def assets(asset_path: str):
     root = content_root()
     full_path = (root / asset_path).resolve()
 
-    # Security: prevent path traversal outside content root
     if not str(full_path).startswith(str(root)):
         abort(404)
 
