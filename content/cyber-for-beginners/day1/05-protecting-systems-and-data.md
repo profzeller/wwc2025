@@ -1,29 +1,39 @@
 # Protecting Systems and Data
 
-Cybersecurity relies on **layered defense**.
+## Big idea
+Good security is layered. You want multiple ways to prevent, detect, and respond.
 
-## Endpoint Protection
-- Antivirus / EDR
-- Host firewalls
-- Disk encryption
+## A simple “layered defense” view
+### Prevent
 
-## Network Protection
-- Firewalls
-- Network segmentation
-- VPNs
+- MFA
+- Patching
+- Least privilege
+- Email filtering
+- Safe defaults
 
-## Identity and Access
-- Authentication
-- Authorization
-- Identity management
+### Detect
 
-## Data Protection
-- Encryption at rest and in transit
-- Backups and recovery planning
+- Logs (login events, system alerts)
+- Antivirus/EDR alerts
+- Unusual behavior (multiple failed logins, strange location logins)
 
-## Activity
-Map one tool you already use to each protection layer.
+### Respond
 
-## Teaching Tip
-Reframe existing IT labs as cybersecurity labs
-by emphasizing *why* protections exist.
+- Clear steps for incidents
+- Backups and recovery plans
+- Communication plan
+
+## Quick activity (8 minutes)
+Choose one threat:
+
+- Phishing
+- Ransomware
+- Stolen device
+- Unauthorized access
+
+Write one control for:
+
+- Prevent:
+- Detect:
+- Respond:

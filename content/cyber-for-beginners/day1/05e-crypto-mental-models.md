@@ -1,22 +1,27 @@
 # Crypto Mental Models (Hashing, Encryption, Keys)
 
-## Learning objectives
-- Distinguish hashing from encryption
-- Explain symmetric vs asymmetric encryption at a high level
-- Understand what TLS does (and what it does not do)
+## Hashing (one-way)
+A hash turns data into a fixed-length value.
 
-## Hashing
-- One-way transformation
-- Used for integrity checks and (properly) for password storage
+- Used to check integrity (did the file change?)
+- Used in password storage (with proper methods)
 
-## Encryption
-- Two-way transformation using a key
-- Protects confidentiality
+Hashing is one-way: you cannot “decrypt” a hash back into the original.
 
-## Symmetric vs asymmetric (conceptual)
-- Symmetric: same key encrypts/decrypts (fast)
-- Asymmetric: public/private keys (identity + key exchange)
+## Encryption (two-way)
+Encryption transforms data using a key.
+If you have the key, you can decrypt.
 
-## TLS summary (beginner level)
-TLS protects data **in transit**.
-It does not automatically make a website “trustworthy” or “safe.”
+## Symmetric vs asymmetric (high level)
+
+- **Symmetric**: same key encrypts and decrypts (fast)
+- **Asymmetric**: public/private keys (useful for identity and secure key exchange)
+
+## TLS (what HTTPS uses)
+TLS protects data **in transit** (between your browser and the server).
+It does not guarantee the website is honest—it guarantees you are connected securely to *that* site.
+
+## Quick check (2 minutes)
+
+1. Which is one-way: hashing or encryption?
+2. What does TLS protect: data at rest, data in transit, or both?

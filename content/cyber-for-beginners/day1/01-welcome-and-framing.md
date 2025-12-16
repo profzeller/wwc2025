@@ -1,32 +1,30 @@
-# Welcome & Framing Cybersecurity
+# Welcome & Framing
 
-![Cybersecurity as a mindset spanning people, technology, and process](/assets/cyber-for-beginners/day1/images/day1-welcome-framing.png)
+## Today’s goal
+You are going to learn the core ideas behind cybersecurity in a way that helps you make good decisions—not just memorize terms.
 
-## Why This Workshop Exists
+## What you will be able to do by the end of Day 1
 
-Cybersecurity is no longer confined to specialized security teams.
-It appears in networking, systems administration, cloud computing,
-software development, and IT support.
+- Explain what cybersecurity is (and what it is not)
+- Use the **CIA Triad** to think clearly about security problems
+- Use a simple **risk** model to prioritize what to do first
+- Identify **threats**, **vulnerabilities**, and **controls**
+- Explain beginner-level security concepts in networking, the web, and identity
+- Describe why logging and incident response matter
 
-Many instructors are already teaching cybersecurity concepts —
-they just are not labeling them as such.
+## How we will learn
 
-This workshop is designed to:
+- Short lessons with examples
+- Hands-on activities and small labs
+- Lots of “think like a defender” practice
 
-  - Build a shared cybersecurity vocabulary
-  - Increase instructor confidence
-  - Translate cybersecurity concepts into teachable material
+## Ground rules
 
-## What This Workshop Is Not
+- Ask questions early.
+- It is normal not to know the jargon—focus on the ideas.
+- We will use real-world examples. Keep discussions respectful and practical.
 
-  - Not a penetration testing bootcamp
-  - Not certification training
-  - Not tool-specific deep dives
+## Warm-up (3 minutes)
+In one sentence:
 
-Instead, this workshop focuses on **concepts, judgment, and pedagogy**.
-
-## Discussion Prompt
-
-  - What courses do you currently teach?
-  - Where does cybersecurity already appear in those courses?
-  - What concerns do you have about teaching cybersecurity topics?
+- What does “cybersecurity” mean to you right now?

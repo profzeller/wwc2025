@@ -1,32 +1,39 @@
 # Cyber Hygiene Basics
 
-Cyber hygiene refers to routine practices that reduce cybersecurity risk.
+## What cyber hygiene means
+Cyber hygiene is the set of everyday habits and settings that prevent common security problems.
 
-## Core Practices
+## Core hygiene checklist (beginner version)
+### Account hygiene
 
-### Authentication
-- Strong passphrases
-- Multi-factor authentication (MFA)
+- Use strong, unique passwords (or a password manager)
+- Turn on MFA when available
+- Do not share accounts
 
-### Least Privilege
-- Users should have only the access they need
+### Update hygiene
 
-### Patching and Updates
-- Known vulnerabilities are commonly exploited
-- Regular updates reduce exposure
+- Keep operating systems and apps updated
+- Remove unused software when possible
 
-### Backups
-- Protect availability and integrity
-- Backups must be tested, not just created
+### Device hygiene
 
-### User Awareness
-- Recognizing suspicious emails
-- Safe browsing habits
+- Lock your screen when you step away
+- Use antivirus/endpoint protection if available
+- Avoid unknown USB devices
 
-## Why Hygiene Matters
-Most successful attacks exploit basic hygiene failures,
-not advanced zero-day vulnerabilities.
+### Data hygiene
 
-## Teaching Tip
-Cyber hygiene activities are easy to embed into existing labs
-and require minimal new infrastructure.
+- Back up important data
+- Know where the “source of truth” is stored
+
+## Quick check (5 minutes)
+Circle the two items that would reduce risk the most in your environment:
+
+- MFA for staff accounts
+- Regular tested backups
+- Better password rules
+- Faster patching
+- Better logging
+- Fewer shared accounts
+
+Write one sentence explaining your choice.

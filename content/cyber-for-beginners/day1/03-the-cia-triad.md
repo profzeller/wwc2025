@@ -1,40 +1,42 @@
 # The CIA Triad
 
-![CIA Triad showing confidentiality, integrity, and availability](/assets/cyber-for-beginners/day1/images/day1-the-cia-triad.png)
+## What you will learn
+You will use the CIA Triad to describe *what kind* of security problem you are dealing with.
 
-The CIA Triad defines the core goals of cybersecurity.
+## CIA stands for
+### Confidentiality
+Keeping information private—only the right people can access it.
 
-## Confidentiality
-Preventing unauthorized access to information.
 Examples:
 
-- Encryption
-- Authentication
-- Access controls
+- Passwords
+- Student records
+- Private messages
 
-## Integrity
-Preventing unauthorized or undetected modification of information.
+### Integrity
+Keeping information accurate and unmodified by unauthorized changes.
+
 Examples:
 
-- Hashing
-- Version control
-- Change management
+- Grades
+- Bank balances
+- System configuration files
 
-## Availability
-Ensuring systems and data are accessible when needed.
+### Availability
+Keeping systems and information accessible when they are needed.
+
 Examples:
 
-- Backups
-- Redundancy
-- Fault tolerance
+- Email and internet access
+- A school’s learning platform
+- A point-of-sale system
 
-## Important Notes
+## Important note
+Many real incidents affect more than one part of CIA.
 
-- Most real-world incidents impact **more than one** CIA component
-- Security often involves **trade-offs** between CIA goals
-- The CIA Triad is a *thinking tool*, not a checklist
+## Quick practice (5 minutes)
+For each scenario, decide whether it is mainly C, I, A—or a mix:
 
-## Teaching Tip
-
-Use the CIA Triad to help students reason about incidents
-instead of reacting emotionally to breaches.
+1. A stolen laptop with unencrypted files.
+2. A student changes a grade in the system without permission.
+3. A website goes offline during registration day.

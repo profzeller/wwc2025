@@ -1,28 +1,39 @@
 # Identity & Access Basics
 
-## Learning objectives
-- Distinguish authentication vs authorization
-- Explain least privilege using real roles and systems
-- Teach strong authentication without creating high friction
+## Two key words
 
-## Definitions
-- **Authentication**: who are you?
-- **Authorization**: what can you do?
+- **Authentication**: proving who you are (login)
+- **Authorization**: what you are allowed to do (permissions)
 
 ## Least privilege
-Give people the minimum access needed to do the job.
+People should have only the access they need to do their job.
 
-## Passwords and reality
-- Password reuse is common
-- Phishing bypasses “strong password” rules
-- Password managers reduce risk and improve usability
+Why this matters:
 
-## MFA
-MFA reduces the impact of stolen passwords.
-It does not eliminate phishing risk entirely.
+- Reduces damage from mistakes
+- Reduces damage from stolen accounts
 
-## Exercise (15 minutes)
-Pick a realistic environment:
-- Define 5 roles (student worker, instructor, lab admin, IT staff, etc.)
-- Identify the minimum access each role needs
-- Identify one access that is commonly over-granted
+## Passwords: the reality
+
+- People reuse passwords
+- Phishing steals passwords
+- Password managers help a lot
+
+## MFA: the practical benefit
+MFA makes stolen passwords less useful.
+It does not automatically stop all phishing.
+
+## Activity (10 minutes)
+Choose a setting (school, small business, lab).
+
+List 4 roles and the minimum access each needs:
+
+- Role 1:
+- Role 2:
+- Role 3:
+- Role 4:
+
+Identify one common access that is too broad:
+
+- Over-granted access:
+- Safer alternative:

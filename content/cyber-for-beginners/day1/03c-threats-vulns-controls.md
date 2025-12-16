@@ -1,28 +1,36 @@
 # Threats, Vulnerabilities, Controls
 
-## Learning objectives
-- Differentiate **threat**, **vulnerability**, and **control**
-- Categorize controls: administrative, technical, physical
-- Identify “high-leverage” beginner controls
-
 ## Definitions
-- **Threat**: something capable of causing harm (person, group, event)
-- **Vulnerability**: a weakness that can be exploited
-- **Control**: a safeguard that reduces likelihood and/or impact
 
-## Control categories
-- **Administrative**: policies, training, procedures, standards
-- **Technical**: MFA, patching, segmentation, EDR, logging
-- **Physical**: locks, badges, secured storage, cameras
+- **Threat**: something that can cause harm (a person, group, or event)
+- **Vulnerability**: a weakness that could be exploited
+- **Control**: something that reduces likelihood and/or impact
 
-## Activity (15–20 minutes)
-Choose one system you support or teach.
+## Examples
+### Example 1
 
-1. List 3 assets.
-2. List 3 threats.
-3. List 3 vulnerabilities.
-4. Propose 3 controls (at least one admin + one technical).
+- Threat: Phishing campaign targeting employees
+- Vulnerability: People click links and enter passwords
+- Control: MFA + training + email filtering
 
-## Instructor note
-This page is designed to help instructors teach cybersecurity without “tool worship.”
-Keep the emphasis on reasoning and decision-making.
+### Example 2
+
+- Threat: Malware infection via USB drive
+- Vulnerability: Unknown USB devices allowed
+- Control: Device policy + endpoint protection + least privilege
+
+## Types of controls
+
+- **Administrative**: policies, training, procedures
+- **Technical**: MFA, patching, logging, antivirus/EDR
+- **Physical**: locks, badges, secured rooms
+
+## Activity (15 minutes)
+Pick a real environment you know (school lab, small business, home network).
+
+Write:
+
+- 3 assets:
+- 2 threats:
+- 2 vulnerabilities:
+- 3 controls (at least one administrative and one technical):

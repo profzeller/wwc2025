@@ -1,14 +1,21 @@
 # Day 1 Wrap-Up
 
-## Key Takeaways
-- Cybersecurity focuses on protecting assets and managing risk
-- The CIA Triad provides a structured way to analyze incidents
-- Cyber hygiene is practical, teachable, and impactful
+## What you learned today
+You practiced:
 
-## Reflection
-- One concept I can teach immediately:
-- One concept I want to explore further:
+- Defining security problems using **CIA**
+- Prioritizing using **risk**
+- Separating **threats**, **vulnerabilities**, and **controls**
+- Applying hygiene and layered defense thinking
+- Understanding identity, web, networking, crypto basics
+- Explaining why logs and incident response matter
 
-## Looking Ahead
-Day 2 focuses on attackers, defenders, social engineering,
-AI-powered threats, and incident response.
+## Exit ticket (5 minutes)
+Answer in 1–2 sentences each:
+
+1. One concept that is clearer than it was this morning:
+2. One concept you still want to practice:
+3. One security improvement you would prioritize in a real environment, and why:
+
+## Optional preview
+Tomorrow we will build on this foundation with more threats, defenses, and response practice.

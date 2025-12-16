@@ -1,56 +1,35 @@
 # What Is Information Security?
 
-![Information security fundamentals showing assets, threats, vulnerabilities, and controls](/assets/cyber-for-beginners/day1/images/day1-what-is-information-security.png)
+## Big idea
+Information security is about **reducing risk** to information and systems by preventing problems, detecting problems, and responding well when problems happen.
 
-Information security is the practice of protecting information and systems from:
+## What information security is NOT
 
-- Unauthorized access
-- Unauthorized use
-- Unauthorized disclosure
-- Disruption
-- Modification
-- Destruction
+- Not just “hacking”
+- Not only for large companies
+- Not a product you buy once and forget
 
-## Core Building Blocks
+## What we are trying to protect
+Examples:
 
-### Assets
-Anything of value:
+- Personal data (student records, employee data)
+- Money and accounts
+- Systems and services (wifi, websites, email)
+- Trust and reputation
 
-- Data (grades, credentials, research)
-- Systems (servers, laptops, networks)
-- Accounts and identities
-- Organizational reputation
+## Beginner-friendly security areas
+You do not need to be an expert in all of these to understand the basics:
 
-### Threats
-Anything capable of causing harm:
+- Identity and access (logins, permissions)
+- Networks (how data moves)
+- Endpoints (laptops, phones)
+- Web and applications (browsers, websites)
+- Data protection (backups, encryption)
+- Monitoring and response (logs, incident response)
 
-- Malware
-- Phishing and social engineering
-- Insider misuse (intentional or accidental)
-- Misconfigurations
-- Physical loss or theft
+## Quick check (2 minutes)
+Write one example of:
 
-### Vulnerabilities
-Weaknesses that threats exploit:
-
-- Weak passwords
-- Unpatched software
-- Excessive permissions
-- Poor monitoring
-
-### Controls
-Safeguards that reduce risk:
-
-- Technical (firewalls, MFA, encryption)
-- Administrative (policies, procedures)
-- Physical (locks, access badges)
-
-## Risk Thinking
-Risk is often described as:
-**Likelihood × Impact**
-
-Not all vulnerabilities are equal, and not all risks should be treated the same.
-
-## Teaching Tip
-Encourage students to understand *systems and relationships*
-before introducing tools.
+- Something worth protecting (an asset)
+- Something that could go wrong
+- Something you could do to reduce that risk

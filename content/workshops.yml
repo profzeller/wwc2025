@@ -2,10 +2,15 @@ workshops:
   - slug: cyber-for-beginners
     title: Cyber for Beginners
     days:
+      - slug: labs
+        title: Labs
+        pages:
+          - file: setup.md
+            title: Lab Environment Setup
+
       - slug: day1
         title: Day 1 — Foundations
         pages:
-
           - file: 01-welcome-and-framing.md
             title: Welcome & Framing
 

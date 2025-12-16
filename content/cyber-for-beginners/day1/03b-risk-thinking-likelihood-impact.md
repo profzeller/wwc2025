@@ -1,40 +1,31 @@
 # Risk Thinking (Likelihood × Impact)
 
-## Learning objectives
-By the end of this section, participants will be able to:
+## Big idea
+Security work is about **risk decisions**. You cannot fix everything at once, so you choose what matters most.
 
-- Explain risk as a decision model (not a feeling)
-- Use a simple risk rubric (likelihood × impact) to prioritize controls
-- Teach beginners to reason about trade-offs
-
-## Core model
+## Simple model
 **Risk = Likelihood × Impact**
 
-- Likelihood: how probable is the event?
-- Impact: if it happens, how bad is it?
+- Likelihood: How probable is it?
+- Impact: If it happens, how bad is it?
 
-## Practical examples (use your environment)
-Pick a familiar environment (school lab, small business, campus IT).
+## Why this helps
+Two problems can feel scary, but one might be far more likely—or far more damaging.
 
-### Scenario A
-A shared admin password exists on multiple systems.
+## Practice (10 minutes)
+Rate each scenario using:
 
-- Likelihood:
-- Impact:
-- One control to reduce likelihood:
-- One control to reduce impact:
+- Likelihood: Low / Medium / High
+- Impact: Low / Medium / High
 
-### Scenario B
-Backups exist, but restore has never been tested.
+Then decide which you would handle first.
 
-- Likelihood:
-- Impact:
-- One control to reduce likelihood:
-- One control to reduce impact:
+1. Backups exist, but nobody has tested restoring them.
+2. Staff reuse passwords across multiple accounts.
+3. A public website is missing updates and patches.
 
-## Teaching tip
-Beginners learn faster when you keep the discussion anchored to:
+Write:
 
-- “What are we protecting?”
-- “What could go wrong?”
-- “What’s the simplest control that moves the needle?”
+- Scenario with highest priority:
+- One control that reduces likelihood:
+- One control that reduces impact:

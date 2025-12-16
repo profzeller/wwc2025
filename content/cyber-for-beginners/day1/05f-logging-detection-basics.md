@@ -1,24 +1,33 @@
 # Logging & Detection Basics
 
-## Learning objectives
-- Explain what logs are and why they matter
-- Identify “high value” logs for beginner environments
-- Introduce detection as “signal finding,” not perfection
-
 ## What is a log?
-A record of an event. Logs support:
-- Incident response
-- Troubleshooting
-- Accountability (who did what, when)
+A log is a record of events. Logs help you answer:
+
+- What happened?
+- When did it happen?
+- Which account/device did it involve?
+
+## Why logs matter
+Without logs, incidents turn into guessing.
 
 ## High-value logs (starter list)
-- Authentication (logins, failures, MFA events)
-- Endpoint security alerts (AV/EDR)
-- Server logs for critical services
-- DNS logs (if available)
-- Email security events (if available)
 
-## Teaching activity
-Ask participants:
-- “If something went wrong, what evidence would you want?”
-Then map that evidence to log sources.
+- Login successes and failures
+- MFA events (enabled, challenged, failed)
+- Endpoint security alerts
+- Admin actions on key systems
+- Server/service errors on important systems
+
+## Activity (8 minutes)
+Imagine someone stole an account password.
+
+What evidence would you want to see?
+
+- Evidence 1:
+- Evidence 2:
+- Evidence 3:
+
+Which logs might contain that evidence?
+
+- Log source 1:
+- Log source 2:

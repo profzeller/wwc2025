@@ -1,30 +1,28 @@
 # Networking Basics for Cyber
 
-## Learning objectives
-- Explain IP addresses, ports, and protocols in plain language
-- Describe DNS and why it matters for security
-- Identify common “network-level” failure and attack patterns
+## Why networking matters
+Many attacks and outages are really networking problems (or look like them). You do not need to be a network engineer—but you do need the basics.
 
-## Minimum viable networking
-- **IP address**: identifies an endpoint on a network
-- **Port**: identifies a service on that endpoint
-- **Protocol**: the rules for communication (TCP/UDP, HTTP/S, DNS)
+## Core concepts
 
-## DNS (critical dependency)
-DNS turns names into IP addresses.
-If DNS is manipulated, users can be redirected to the wrong destination.
+- **IP address**: identifies a device on a network
+- **Port**: identifies a service on that device (like a door)
+- **Protocol**: rules for communication (TCP, UDP, HTTP, DNS)
 
-### Teaching demo ideas (portable)
-- `nslookup example.com`
-- `ping example.com`
-- `traceroute` / `tracert` (show the path conceptually)
+## DNS (names to addresses)
+DNS turns names (like `example.com`) into IP addresses.
 
-## Security lens
-- Open ports expose services (attack surface)
-- Misconfigured networks can leak internal services
-- DNS and routing failures can look like “the internet is down,” but have many causes
+If DNS is wrong or compromised:
+
+- you may go to the wrong site
+- security tools may not work correctly
+
+## Quick check (3 minutes)
+
+1. What does port 443 usually mean?
+2. Why would attackers care about DNS?
 
 ## Optional visual
-Place images in `images/` and reference them relatively:
+If your instructor provides it:
 
-`![DNS resolution flow](images/dns-flow.png)`
+`![DNS flow](images/dns-flow.png)`
