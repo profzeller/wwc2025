@@ -32,7 +32,7 @@ workshops:
           - file: 04-cyber-hygiene-basics.md
             title: Cyber Hygiene Basics
 
-          - file: lab2-cyber-hygiene-challenge.md
+          - file: lab2-account_security_clinic.md
             title: Lab 2 — Cyber Hygiene Challenge
 
           - file: 05-protecting-systems-and-data.md
