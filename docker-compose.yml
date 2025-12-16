@@ -4,22 +4,13 @@ services:
     container_name: wwc2025
     restart: unless-stopped
 
-    # Nginx Proxy Manager will reach this container over the shared network
     networks:
       - nginx-proxy_default
 
     environment:
       FLASK_ENV: "production"
-      # Optional: if your app reads PORT (many do), keep it explicit
       PORT: "5000"
 
-    # Production-friendly: update content without rebuilding the image
-    # Keep it read-only
-    volumes:
-      - ./content:/app/content:ro
-
-    # Optional but recommended: don't publish ports to the host
-    # Expose is only documentation for inter-container traffic
     expose:
       - "5000"
 
