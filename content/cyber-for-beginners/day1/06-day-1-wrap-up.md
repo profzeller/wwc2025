@@ -1,5 +1,7 @@
 # Day 1 Wrap-Up
 
+![Students reflecting on cybersecurity concepts learned](images/day1-wrap-up.png)
+
 ## What you learned today
 You practiced:
 

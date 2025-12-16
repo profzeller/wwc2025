@@ -1,5 +1,7 @@
 # Cyber Hygiene Basics
 
+![Examples of good and poor cyber hygiene practices](images/day1-cyber-hygiene.png)
+
 ## What cyber hygiene means
 Cyber hygiene is the set of everyday habits and settings that prevent common security problems.
 

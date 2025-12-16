@@ -1,5 +1,7 @@
 # Welcome & Framing
 
+![Students learning cybersecurity fundamentals in a classroom](images/day1-welcome-framing.png)
+
 ## Today’s goal
 You are going to learn the core ideas behind cybersecurity in a way that helps you make good decisions—not just memorize terms.
 

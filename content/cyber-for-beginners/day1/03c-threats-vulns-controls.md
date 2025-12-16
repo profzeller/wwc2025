@@ -1,5 +1,7 @@
 # Threats, Vulnerabilities, Controls
 
+![Relationship between threats, vulnerabilities, and controls](images/day1-threats-vulns-controls.png)
+
 ## Definitions
 
 - **Threat**: something that can cause harm (a person, group, or event)

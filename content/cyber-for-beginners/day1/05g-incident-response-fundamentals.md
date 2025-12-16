@@ -1,5 +1,7 @@
 # Incident Response Fundamentals
 
+![Incident response lifecycle](images/day1-incident-response.png)
+
 ## Big idea
 Incidents happen. The difference between a small problem and a disaster is how you respond.
 

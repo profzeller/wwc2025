@@ -1,5 +1,7 @@
 # Logging & Detection Basics
 
+![System logging and detection concepts](images/day1-logging-detection.png)
+
 ## What is a log?
 A log is a record of events. Logs help you answer:
 

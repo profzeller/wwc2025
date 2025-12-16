@@ -1,5 +1,7 @@
 # Risk Thinking (Likelihood × Impact)
 
+![Risk model showing likelihood versus impact](images/day1-risk-likelihood-impact.png)
+
 ## Big idea
 Security work is about **risk decisions**. You cannot fix everything at once, so you choose what matters most.
 

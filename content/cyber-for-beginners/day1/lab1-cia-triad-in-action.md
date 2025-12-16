@@ -1,5 +1,7 @@
 # Lab 1 — CIA Triad in Action
 
+![Students analyzing CIA Triad security scenarios](images/day1-lab1-cia-scenarios.png)
+
 ## Before you begin
 You must have the Lab Hub running.
 

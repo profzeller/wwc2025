@@ -1,5 +1,7 @@
 # Protecting Systems and Data
 
+![Layered defense protecting systems and data](images/day1-layered-defense.png)
+
 ## Big idea
 Good security is layered. You want multiple ways to prevent, detect, and respond.
 

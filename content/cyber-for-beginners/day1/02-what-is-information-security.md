@@ -1,6 +1,9 @@
 # What Is Information Security?
 
+![Conceptual overview of information security protecting data and systems](images/day1-what-is-infosec.png)
+
 ## Big idea
+
 Information security is about **reducing risk** to information and systems by preventing problems, detecting problems, and responding well when problems happen.
 
 ## What information security is NOT

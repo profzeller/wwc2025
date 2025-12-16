@@ -1,5 +1,7 @@
 # Identity & Access Basics
 
+![Identity and access control with least privilege](images/day1-identity-access.png)
+
 ## Two key words
 
 - **Authentication**: proving who you are (login)

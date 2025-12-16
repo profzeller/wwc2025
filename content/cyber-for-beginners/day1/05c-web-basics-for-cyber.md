@@ -1,5 +1,7 @@
 # Web Basics (HTTP/S) for Cyber
 
+![HTTP versus HTTPS communication](images/day1-web-http-https.png)
+
 ## What happens when you visit a website
 
 1. Your device resolves a name (DNS)

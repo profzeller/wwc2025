@@ -1,5 +1,7 @@
 # The CIA Triad
 
+![The CIA Triad protecting digital assets](images/day1-cia-triad.png)
+
 ## What you will learn
 You will use the CIA Triad to describe *what kind* of security problem you are dealing with.
 

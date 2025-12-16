@@ -1,5 +1,7 @@
 # Crypto Mental Models (Hashing, Encryption, Keys)
 
+![Hashing versus encryption mental models](images/day1-crypto-mental-models.png)
+
 ## Hashing (one-way)
 A hash turns data into a fixed-length value.
 

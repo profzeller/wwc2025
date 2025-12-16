@@ -1,5 +1,7 @@
 # Lab 2 — Cyber Hygiene Challenge
 
+![Students identifying cyber hygiene problems in a scenario](images/day1-lab2-hygiene-challenge.png)
+
 ## Objective
 Practice basic cyber hygiene tasks and identify teaching opportunities.
 
