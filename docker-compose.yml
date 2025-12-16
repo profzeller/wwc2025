@@ -2,9 +2,14 @@ services:
   wwc2025:
     build: .
     container_name: wwc2025
-    ports:
-      - "8091:5000"
-    # For development: live-edit markdown without rebuilding image
+    # If you're using Nginx Proxy Manager and a shared network:
+    networks:
+      - nginx-proxy_default
     volumes:
       - ./content:/app/content:ro
     restart: unless-stopped
+
+# If using an external network for Nginx Proxy Manager, uncomment:
+networks:
+  nginx-proxy_default:
+    external: true
