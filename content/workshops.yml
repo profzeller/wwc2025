@@ -89,6 +89,9 @@ workshops:
           - file: 06-social-engineering-deep-dive.md
             title: Social Engineering Deep Dive
 
+          - file: lab5-social-engineering.md
+            title: Lab 5 — Social Engineering Analysis
+
           - file: 07-cyber-cloud-basics.md
             title: Cyber + Cloud Basics
 
