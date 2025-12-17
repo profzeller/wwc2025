@@ -5,6 +5,9 @@ workshops:
       - slug: labs
         title: Labs
         pages:
+          - file: netlab.md
+            title: NETLAB+ Access
+
           - file: setup.md
             title: Lab Environment Setup
 
