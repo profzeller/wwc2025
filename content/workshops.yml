@@ -145,6 +145,9 @@ workshops:
 
       - slug: resources
         title: Resources
+        pages:
+          - file: urls.md
+            title: URL Resources
 
       - slug: assessment
         title: Assessment
