@@ -1,5 +1,9 @@
 # URL Resources
 
+- [WWC2025 GitHub](https://github.com/profzeller/wwc2025)
+- [WWC2025-labs GitHub](https://github.com/profzeller/wwc2025-labs)
+
+
 ## AI Software
 
 - [AnythingLLM](https://anythingllm.com/)
@@ -40,3 +44,6 @@
 - [Apache Guacamole](https://guacamole.apache.org/)
 - [Install Guacamole in Docker](https://guacamole.apache.org/doc/gug/guacamole-docker.html)
 - [Setup Guacamole in Proxmox](https://www.youtube.com/watch?v=m2z0BZs9MoY)
+
+# Instructor Training Materials
+- [NDG](https://netdevgroup.com)
