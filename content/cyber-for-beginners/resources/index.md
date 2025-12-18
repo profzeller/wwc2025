@@ -30,3 +30,11 @@
 ## Cyber Tools
 
 - [CyberChef](https://gchq.github.io/CyberChef/)
+
+## Virtualization/Container Tools
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Proxmox VE](https://proxmox.com/en/)
+- [Apache Guacamole](https://guacamole.apache.org/)
+- [Install Guacamole in Docker](https://guacamole.apache.org/doc/gug/guacamole-docker.html)
+- [Setup Guacamole in Proxmox](https://www.youtube.com/watch?v=m2z0BZs9MoY)

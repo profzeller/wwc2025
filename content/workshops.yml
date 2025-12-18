@@ -145,3 +145,9 @@ workshops:
 
       - slug: resources
         title: Resources
+
+      - slug: assessment
+        title: Assessment
+        pages:
+          - file: post.md
+            title: Post-Assessment

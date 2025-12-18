@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <h1>Post-Assessment Results (Admin)</h1>
+
+  <p>
+    <a class="pager-btn" href="{{ csv_url }}">Download CSV</a>
+  </p>
+
+  {% if not rows %}
+    <p>No submissions have been recorded yet.</p>
+  {% else %}
+    <div style="overflow-x:auto;">
+      <table style="border-collapse: collapse; width: 100%; min-width: 900px;">
+        <thead>
+          <tr>
+            {% for h in headers %}
+              <th style="text-align:left; border-bottom: 1px solid var(--border); padding: 8px;">{{ h }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+            <tr>
+              {% for h in headers %}
+                <td style="border-bottom: 1px solid rgba(255,255,255,0.06); padding: 8px;">
+                  {{ row.get(h, "") }}
+                </td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

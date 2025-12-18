@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <h1>Workshop Post-Assessment</h1>
+
+  <p>This assessment is multiple choice. Enter your name and answer all questions. Submit once when finished.</p>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div style="border: 1px solid var(--border); padding: 12px; border-radius: 10px; margin: 12px 0;">
+        {% for category, msg in messages %}
+          <div><strong>{{ category|capitalize }}:</strong> {{ msg }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    <label for="name"><strong>Name</strong></label><br />
+    <input id="name" name="name" type="text" required
+           style="width: 320px; max-width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); color: var(--text);" />
+    <br /><br />
+
+    {% for prompt, correct, options in questions %}
+      {% set q_index = loop.index0 %}
+      <fieldset style="border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin: 14px 0;">
+        <legend style="padding: 0 8px;"><strong>{{ prompt }}</strong></legend>
+
+        {% for key, text in options.items() %}
+          <label style="display:block; margin: 6px 0;">
+            <input type="radio" name="q{{ q_index }}" value="{{ key }}" required />
+            <span style="margin-left: 6px;">{{ text }}</span>
+          </label>
+        {% endfor %}
+      </fieldset>
+    {% endfor %}
+
+    <button type="submit" class="pager-btn">Submit Assessment</button>
+  </form>
+</div>
+{% endblock %}

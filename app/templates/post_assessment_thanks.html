@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <h1>Assessment Submitted</h1>
+
+  <p>Thank you. Your responses have been recorded.</p>
+
+  {% if score and total %}
+    <p><strong>Your score:</strong> {{ score }} / {{ total }}</p>
+  {% endif %}
+
+  <p>You may now close this page.</p>
+</div>
+{% endblock %}
