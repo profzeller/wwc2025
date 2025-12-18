@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+  <h1>Post-Assessment Results</h1>
+
+  <p><strong>Name:</strong> {{ name }}</p>
+  <p><strong>Score:</strong> {{ score }} / {{ total }}</p>
+
+  <p>This page shows your selected answers and the correct answers.</p>
+
+  {% for r in results %}
+    <fieldset style="border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin: 14px 0;">
+      <legend style="padding: 0 8px;"><strong>{{ r.prompt }}</strong></legend>
+
+      <p>
+        <strong>Your answer:</strong>
+        {{ r.picked_key }} — {{ r.picked_text }}
+        {% if r.ok %}
+          <span class="badge ok">Correct</span>
+        {% else %}
+          <span class="badge bad">Incorrect</span>
+        {% endif %}
+      </p>
+
+      {% if not r.ok %}
+        <p><strong>Correct answer:</strong> {{ r.correct_key }} — {{ r.correct_text }}</p>
+      {% endif %}
+    </fieldset>
+  {% endfor %}
+
+  <p style="margin-top: 18px;">
+    <a class="pager-btn" href="/cyber-for-beginners/assessment/post">Back to Assessment Page</a>
+  </p>
+</div>
+{% endblock %}

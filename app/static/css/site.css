@@ -85,12 +85,50 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid var(--border);
 }
 
+/* More visible buttons (applies to <a> and <button>) */
 .pager-btn {
   display: inline-block;
   padding: 10px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(138,180,248,0.55);
   border-radius: 10px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(138,180,248,0.18);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.pager-btn:hover {
+  background: rgba(138,180,248,0.28);
+  text-decoration: none;
+}
+
+.pager-btn:focus {
+  outline: 2px solid rgba(138,180,248,0.55);
+  outline-offset: 2px;
+}
+
+button.pager-btn {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Correct/incorrect badges used on the answer review page */
+.badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+
+.badge.ok {
+  background: rgba(46, 204, 113, 0.18);
+  border-color: rgba(46, 204, 113, 0.45);
+}
+
+.badge.bad {
+  background: rgba(231, 76, 60, 0.18);
+  border-color: rgba(231, 76, 60, 0.45);
 }
 
 .page img {
@@ -106,6 +144,3 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
-
-
-

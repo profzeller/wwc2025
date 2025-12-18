@@ -240,7 +240,6 @@ def _require_admin_token() -> None:
     """
     expected = os.environ.get("ASSESSMENT_ADMIN_TOKEN", "").strip()
     if not expected:
-        # Fail closed if token is not configured.
         abort(403)
 
     provided = (request.args.get("token") or "").strip()
@@ -267,16 +266,31 @@ def post_assessment():
 
         answers: List[str] = []
         score = 0
+        results = []
 
-        for idx, (_, correct, options) in enumerate(QUESTIONS):
+        for idx, (prompt, correct, options) in enumerate(QUESTIONS):
             field = f"q{idx}"
-            ans = request.form.get(field)
-            if ans not in options:
+            picked = request.form.get(field)
+
+            if picked not in options:
                 flash("Please answer every question before submitting.", "error")
                 return render_template("post_assessment.html", questions=QUESTIONS)
-            answers.append(ans)
-            if ans == correct:
+
+            answers.append(picked)
+            ok = (picked == correct)
+            if ok:
                 score += 1
+
+            results.append(
+                {
+                    "prompt": prompt,
+                    "picked_key": picked,
+                    "picked_text": options[picked],
+                    "correct_key": correct,
+                    "correct_text": options[correct],
+                    "ok": ok,
+                }
+            )
 
         DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
         write_header = not DATA_FILE.exists()
@@ -292,13 +306,21 @@ def post_assessment():
                 )
             writer.writerow([timestamp, name, score, len(QUESTIONS)] + answers)
 
-        return redirect(url_for("assessment.post_assessment_thanks", score=score, total=len(QUESTIONS)))
+        # Show the answer key and their selections immediately
+        return render_template(
+            "post_assessment_results.html",
+            name=name,
+            score=score,
+            total=len(QUESTIONS),
+            results=results,
+        )
 
     return render_template("post_assessment.html", questions=QUESTIONS)
 
 
 @assessment_bp.route("/assessment/post/thanks")
 def post_assessment_thanks():
+    # Kept for compatibility (not used by default after we show answer review)
     score = request.args.get("score")
     total = request.args.get("total")
     return render_template("post_assessment_thanks.html", score=score, total=total)
@@ -318,10 +340,8 @@ def assessment_results():
             for row in reader:
                 rows.append(row)
 
-    # Most recent first
     rows.reverse()
 
-    # Provide a convenient CSV download URL that keeps the same token.
     token = request.args.get("token", "")
     csv_url = url_for("assessment.assessment_results_csv", token=token) if token else url_for("assessment.assessment_results_csv")
 
@@ -333,9 +353,12 @@ def assessment_results_csv():
     _require_admin_token()
 
     if not DATA_FILE.exists():
-        # Return a valid CSV with no rows if empty.
         content = "timestamp_utc,name,score,total\n"
-        return Response(content, mimetype="text/csv", headers={"Content-Disposition": "attachment; filename=post_assessment_results.csv"})
+        return Response(
+            content,
+            mimetype="text/csv",
+            headers={"Content-Disposition": "attachment; filename=post_assessment_results.csv"},
+        )
 
     content = DATA_FILE.read_text(encoding="utf-8")
     return Response(
