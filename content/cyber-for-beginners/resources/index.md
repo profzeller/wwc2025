@@ -27,8 +27,10 @@
 - [Security Onion](https://securityonionsolutions.com/)
 - [Wazuh](https://wazuh.com/)
 
-## Cyber Tools
+## Cyber Tools/Testing
 
+- [CTFd](https://ctfd.io/)
+- [CTFD GitHub](https://github.com/CTFd/CTFd)
 - [CyberChef](https://gchq.github.io/CyberChef/)
 
 ## Virtualization/Container Tools
