@@ -112,3 +112,33 @@ workshops:
         pages:
           - file: index.md
             title: Day 3 Overview
+
+          - file: 01-offensive-security-ethics.md
+            title: Offensive Security for Beginners
+
+          - file: 02-recon-and-attack-chain.md
+            title: Recon and the Attack Chain
+
+          - file: 03-vulnerability-basics.md
+            title: Vulnerability Basics
+
+          - file: 04-attack-defend-exercises.md
+            title: Attack & Defend Exercises
+
+          - file: 05-cloud-container-security.md
+            title: Cloud & Container Security
+
+          - file: 06-digital-forensics-foundations.md
+            title: Digital Forensics Foundations
+
+          - file: 07-frameworks-and-governance.md
+            title: Frameworks and Governance
+
+          - file: 08-capstone-integration.md
+            title: Capstone Integration
+
+          - file: 09-implementation-planning.md
+            title: Implementation Planning
+
+          - file: 10-day-3-wrap-up.md
+            title: Day 3 Wrap-Up
